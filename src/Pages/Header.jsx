@@ -33,7 +33,7 @@ const Header = () => {
                     </p>
                 </div>
                 <div className='flex-1'>
-                    <img className='ml-auto' src={picture} alt="" />
+                    <img className='my__Picture ml-auto' src={picture} alt="" />
                 </div>
             </div>
         </header>

@@ -8,6 +8,27 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 } */
 
-.text-muted{
+.text-muted {
     @apply text-gray-300
+}
+
+.my__Picture {
+    animation-duration: 3s;
+    animation-name: updown;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
 }
