@@ -1,59 +1,39 @@
 import React from 'react';
-import { FaReact } from 'react-icons/fa'
+import { FaNode, FaReact } from 'react-icons/fa'
+import { TbApi } from 'react-icons/tb'
+import { SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiPython, SiDjango } from 'react-icons/si'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Skills = () => {
     return (
-        <div className='w-11/12 mx-auto mt-20 bg-slate-900 p-16 rounded-2xl'>
-            <div className='grid grid-cols-3 gap-16'>
-                <div>
-                    <FaReact />
-                    <h2 className='text-3xl font-medium'>Front-End</h2>
-                    <p className='text-lg'>
-                        Experience with <br />
-                        Html, Css, Sass, Bootstrap, TailwindCss, Javascript, ReactJS, React-router, MaterialUI, Redux etc.
-                    </p>
-                </div>
-                <div>
-                    <FaReact />
-                    <h2 className='text-3xl font-medium'>Front-End</h2>
-                    <p className='text-lg'>
-                        Experience with <br />
-                        Html, Css, Sass, Bootstrap, TailwindCss, Javascript, ReactJS, React-router, MaterialUI, Redux etc.
-                    </p>
-                </div>
-                <div>
-                    <FaReact />
-                    <h2 className='text-3xl font-medium'>Front-End</h2>
-                    <p className='text-lg'>
-                        Experience with <br />
-                        Html, Css, Sass, Bootstrap, TailwindCss, Javascript, ReactJS, React-router, MaterialUI, Redux etc.
-                    </p>
-                </div>
-                <div>
-                    <FaReact />
-                    <h2 className='text-3xl font-medium'>Front-End</h2>
-                    <p className='text-lg'>
-                        Experience with <br />
-                        Html, Css, Sass, Bootstrap, TailwindCss, Javascript, ReactJS, React-router, MaterialUI, Redux etc.
-                    </p>
-                </div>
-                <div>
-                    <FaReact />
-                    <h2 className='text-3xl font-medium'>Front-End</h2>
-                    <p className='text-lg'>
-                        Experience with <br />
-                        Html, Css, Sass, Bootstrap, TailwindCss, Javascript, ReactJS, React-router, MaterialUI, Redux etc.
-                    </p>
-                </div>
-                <div>
-                    <FaReact />
-                    <h2 className='text-3xl font-medium'>Front-End</h2>
-                    <p className='text-lg'>
-                        Experience with <br />
-                        Html, Css, Sass, Bootstrap, TailwindCss, Javascript, ReactJS, React-router, MaterialUI, Redux etc.
-                    </p>
-                </div>
-            </div>
+        <div className='w-11/12 mx-auto bg-slate-900 px-16 rounded-2xl'>
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+            >
+                <SwiperSlide>
+                    <div className='flex justify-between'>
+                        <FaReact className="w-20 h-20 text-blue-400" />
+                        <SiJavascript className="w-20 h-20 text-yellow-300" />
+                        <SiHtml5 className="w-20 h-20 text-orange-500" />
+                        <SiCss3 className="w-20 h-20 text-blue-400" />
+                        <SiTailwindcss className="w-20 h-20 text-blue-400" />
+                        <SiBootstrap className="w-20 h-20 text-purple-500" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='flex justify-between'>
+                        <FaNode className="w-20 h-20 text-blue-400" />
+                        <SiExpress className="w-20 h-20 text-yellow-300" />
+                        <TbApi className="w-20 h-20 text-yellow-300" />
+                        <SiMongodb className="w-20 h-20 text-orange-500" />
+                        <SiPython className="w-20 h-20 text-blue-400" />
+                        <SiDjango className="w-20 h-20 text-blue-400" />
+                    </div>
+                </SwiperSlide>
+            </Swiper>
         </div>
     );
 };

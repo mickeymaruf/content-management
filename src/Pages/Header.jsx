@@ -1,10 +1,11 @@
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from 'react-icons/ai'
 import picture from '../assets/picture.png'
+import { TypeAnimation } from 'react-type-animation';
 
 const Header = () => {
     return (
-        <header>
+        <header className='bannerBg pb-64'>
             <nav className='w-11/12 mx-auto flex justify-between items-center py-8'>
                 <h1 className='text-3xl font-bold'>MARUF</h1>
                 <ul className='flex gap-10 text-xl text-muted'>
@@ -24,9 +25,22 @@ const Header = () => {
                     <h2 className='text-3xl'>
                         👋 Hi there,
                     </h2>
+
                     <h1 className='text-5xl font-bold mt-3 mb-5'>
                         I'm Maruf <br />
-                        Full Stack Developer
+                        <TypeAnimation
+                            sequence={[
+                                'Full Stack Developer', // Types 'One'
+                                1000, // Waits 1s
+                                'MERN Stack Developer', // Deletes 'One' and types 'Two'
+                                2000, // Waits 2s
+                                'Front Stac', // Types 'Three' without deleting 'Two'
+                            ]}
+                            // wrapper="div"
+                            cursor={true}
+                            repeat={Infinity}
+                        />
+
                     </h1>
                     <p className='text-xl font-thin'>
                         I'm a full-stack JavaScript developer with a passion for developing scalable web applications and working across the full stack. I've built some web apps from the ground up using ReactJs, NodeJs, and MongoDB.

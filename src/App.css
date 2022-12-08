@@ -5,6 +5,15 @@
     background-repeat: no-repeat;
 }
 
-.btn{
+.btn {
     @apply bg-slate-700 px-6 py-2 mx-auto block uppercase shadow-sm shadow-black
+}
+
+* {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
