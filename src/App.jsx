@@ -1,4 +1,5 @@
 import './App.css'
+import Contact from './Pages/Contact'
 import Footer from './Pages/Footer'
 import Header from './Pages/Header'
 import Projects from './Pages/Projects'
@@ -11,10 +12,10 @@ function App() {
       <Projects />
       <div className='relative -top-32 ml-16'>
         <h1 className='text-5xl font-medium'>Skills</h1>
-        <p className='text-2xl'>I've worked with a range of technologies in the web development <br />
-          world. From design to backend.</p>
+        <div className='w-20 h-1 bg-white mt-2 rounded-full'></div>
       </div>
       <Skills />
+      <Contact />
       <Footer />
     </div>
   )

@@ -1,7 +1,6 @@
 import React from 'react';
-import { FaNode, FaReact } from 'react-icons/fa'
-import { TbApi } from 'react-icons/tb'
-import { SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiPython, SiDjango } from 'react-icons/si'
+import { FaGit, FaGitAlt, FaGithub, FaNode, FaReact } from 'react-icons/fa'
+import { SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiPython, SiDjango, SiVercel, SiNetlify } from 'react-icons/si'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Skills = () => {
@@ -10,8 +9,6 @@ const Skills = () => {
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
                     <div className='flex justify-between'>
@@ -25,12 +22,19 @@ const Skills = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='flex justify-between'>
-                        <FaNode className="w-20 h-20 text-blue-400" />
-                        <SiExpress className="w-20 h-20 text-yellow-300" />
-                        <TbApi className="w-20 h-20 text-yellow-300" />
-                        <SiMongodb className="w-20 h-20 text-orange-500" />
-                        <SiPython className="w-20 h-20 text-blue-400" />
-                        <SiDjango className="w-20 h-20 text-blue-400" />
+                        <FaNode className="w-20 h-20 text-green-500" />
+                        <SiExpress className="w-20 h-20 text-black" />
+                        <SiExpress className="w-20 h-20 text-black" />
+                        <SiMongodb className="w-20 h-20 text-green-500" />
+                        <SiPython className="w-20 h-20 text-sky-800" />
+                        <SiDjango className="w-20 h-20 text-green-700" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='flex justify-between'>
+                        <FaGitAlt className="w-20 h-20 text-red-500" />
+                        <FaGithub className="w-20 h-20 text-black" />
+                        <SiNetlify className="w-20 h-20 text-sky-500" />
                     </div>
                 </SwiperSlide>
             </Swiper>

@@ -45,10 +45,10 @@ const Projects = () => {
                 >
                     {
                         [...Array(6).keys()].map(i => <SwiperSlide key={i} className='my-5'>
-                            <div className='bg-slate-800 rounded-lg'>
+                            <div className='shadow-lg shadow-sky-300/20 rounded-lg'>
                                 <img className='rounded-t-lg' src="https://mizanmahi.netlify.app/images/arena.png" alt="" />
                                 <h2 className='mt-3 mx-5 text-center text-3xl'>Full stack e-commerce application (MERN)</h2>
-                                <div className='px-8 py-6'>
+                                <div className='px-8 pt-6 pb-4'>
                                     <p>I've Developed this eCommerce application using MERN technologies. Users can create accounts and order products also can manage the orders from the dashboard. Implemented role-based functionality and ui. Utilized Firebase for authentication.</p>
                                     <button className='btn mt-3 rounded-md'>Details</button>
                                 </div>
@@ -56,7 +56,7 @@ const Projects = () => {
                         </SwiperSlide>)
                     }
                     <SwiperSlide className='my-5'>
-                        <div className='bg-slate-800 rounded-lg relative'>
+                        <div className='shadow-lg shadow-sky-300/20 rounded-lg relative'>
                             <div className='invisible'>
                                 <img className='rounded-t-lg' src="https://mizanmahi.netlify.app/images/arena.png" alt="" />
                                 <h2 className='mt-3 mx-5 text-center text-3xl'>Full stack e-commerce application (MERN)</h2>
