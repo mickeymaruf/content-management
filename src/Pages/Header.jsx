@@ -68,7 +68,7 @@ const Header = () => {
                     <p className='text-xl font-thin'>
                         I'm a full-stack JavaScript developer with a passion for developing scalable web applications and working across the full stack. I've built some web apps from the ground up using ReactJs, NodeJs, and MongoDB.
                     </p>
-                    <a target="_blank" href="https://drive.google.com/file/d/1NRpCgZKKHvl80tYBgPLPhwb6OkmX6Gx6/view?usp=share_link">
+                    <a className='inline-block' target="_blank" href="https://drive.google.com/file/d/1NRpCgZKKHvl80tYBgPLPhwb6OkmX6Gx6/view?usp=share_link">
                         <button className='btn flex items-center gap-3 mt-5'><BsDownload /> Resume</button>
                     </a>
                 </div>

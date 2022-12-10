@@ -24,7 +24,6 @@ const Skills = () => {
                     <div className='flex justify-between'>
                         <FaNode className="w-20 h-20 text-green-500" />
                         <SiExpress className="w-20 h-20 text-black" />
-                        <SiExpress className="w-20 h-20 text-black" />
                         <SiMongodb className="w-20 h-20 text-green-500" />
                         <SiPython className="w-20 h-20 text-sky-800" />
                         <SiDjango className="w-20 h-20 text-green-700" />

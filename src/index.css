@@ -16,11 +16,16 @@ body {
     @apply text-gray-300
 }
 
+.badge {
+    @apply border rounded-full px-3 py-[2px]
+}
+
 .my__Picture {
     animation-duration: 3s;
     animation-name: updown;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    pointer-events: none;
 }
 
 @keyframes updown {

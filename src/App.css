@@ -6,7 +6,7 @@
 }
 
 .btn {
-    @apply bg-slate-700 px-6 py-2 rounded-md block uppercase shadow-lg shadow-slate-800/10
+    @apply bg-slate-700 px-6 py-2 rounded-md uppercase shadow-lg shadow-slate-800/10
 }
 
 * {
