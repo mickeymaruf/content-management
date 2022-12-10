@@ -1,12 +1,15 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper';
+import { EffectCoverflow, Pagination } from 'swiper';
 import { AiFillGithub } from 'react-icons/ai';
 import pharma from '../assets/projects/pharma.png';
 import dailydeals from '../assets/projects/daily-deals.png';
 import quizlet from '../assets/projects/quizlet.png';
 import brownsKitchen from '../assets/projects/brownsKitchen.png';
 import pirates from '../assets/projects/pirates.png';
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Projects = () => {
     return (
@@ -27,10 +30,11 @@ const Projects = () => {
                         slideShadows: true,
                     }}
                     initialSlide={1}
-                    pagination={true}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    pagination={{
+                        dynamicBullets: true,
+                    }}
+                    modules={[EffectCoverflow, Pagination]}
                     className="mySwiper"
-                    navigation={true}
                     breakpoints={{
                         // when window width is >= 0px
                         0: {
@@ -48,7 +52,7 @@ const Projects = () => {
                         }
                     }}
                 >
-                    <SwiperSlide className='my-5'>
+                    <SwiperSlide className='my-5 pb-3'>
                         <div className='shadow-lg shadow-sky-300/20 rounded-lg border border-slate-400'>
                             <img className='rounded-t-lg' src={pharma} alt="" />
                             <h2 className='mt-3 mx-5 text-center text-3xl'>Pharma - Clinic management app</h2>
@@ -62,7 +66,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='my-5'>
+                    <SwiperSlide className='my-5 pb-3'>
                         <div className='shadow-lg shadow-sky-300/20 rounded-lg border border-slate-400'>
                             <img className='rounded-t-lg' src={dailydeals} alt="" />
                             <h2 className='mt-3 mx-5 text-center text-3xl'>Daily Deals e-commerce application (MERN)</h2>
@@ -74,7 +78,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='my-5'>
+                    <SwiperSlide className='my-5 pb-3'>
                         <div className='shadow-lg shadow-sky-300/20 rounded-lg border border-slate-400'>
                             <img className='rounded-t-lg' src={quizlet} alt="" />
                             <h2 className='mt-3 mx-5 text-center text-3xl'>Quizlet - Online Quiz (React)</h2>
@@ -84,7 +88,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='my-5'>
+                    <SwiperSlide className='my-5 pb-3'>
                         <div className='shadow-lg shadow-sky-300/20 rounded-lg border border-slate-400'>
                             <img className='rounded-t-lg' src={brownsKitchen} alt="" />
                             <h2 className='mt-3 mx-5 text-center text-3xl'>Browns Kitchen - Food service review app</h2>
@@ -94,7 +98,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='my-5'>
+                    <SwiperSlide className='my-5 pb-3'>
                         <div className='shadow-lg shadow-sky-300/20 rounded-lg border border-slate-400'>
                             <img className='rounded-t-lg' src={pirates} alt="" />
                             <h2 className='mt-3 mx-5 text-center text-3xl'>Pirates of Programming Educational Website</h2>
@@ -104,11 +108,17 @@ const Projects = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className='my-5'>
-                        <div className='h-[530px] shadow-lg shadow-sky-300/20 backdrop-blur-sm border border-slate-400 rounded-lg flex items-center justify-center'>
-                            <a target="_blank" href="https://github.com/mickeymaruf">
-                                <button className='bg-slate-500 px-5 py-3 rounded-lg uppercase flex items-center gap-3'>View More on <AiFillGithub className='w-8 h-8' /></button>
-                            </a>
+                    <SwiperSlide className='my-5 pb-3'>
+                        <div className='shadow-lg shadow-sky-300/20 backdrop-blur-sm border border-slate-400 rounded-lg relative'>
+                            <div className='invisible'>
+                                <img className='rounded-t-lg' src={pharma} alt="" />
+                                <h2 className='mt-3 mx-5 text-center text-3xl'>Full stack e-commerce application (MERN)</h2>
+                                <div className='px-8 py-6'>
+                                    <p>I've Developed this eCommerce application using MERN technologies. Users can create accounts and order products also can manage the orders from the dashboard. Implemented role-based functionality and ui. Utilized Firebase for authentication.</p>
+                                    <button className='btn mt-3'>Details</button>
+                                </div>
+                            </div>
+                            <button className='bg-slate-500 px-5 py-3 rounded-lg absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 uppercase flex items-center gap-3'>View More on <AiFillGithub className='w-8 h-8' /></button>
                         </div>
                     </SwiperSlide>
                 </Swiper>
