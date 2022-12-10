@@ -4,6 +4,7 @@ import Footer from './Pages/Footer'
 import Header from './Pages/Header'
 import Projects from './Pages/Projects'
 import Skills from './Pages/Skills'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       </div>
       <Skills />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
+      <Toaster />
     </div>
   )
 }

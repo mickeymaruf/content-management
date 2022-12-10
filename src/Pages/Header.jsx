@@ -17,12 +17,12 @@ const Header = () => {
                         <li><a href="#home">Home</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li>Contact</li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <ul className='hidden md:flex gap-10'>
-                        <li><AiFillGithub className='h-8 w-8' /></li>
-                        <li><AiFillLinkedin className='h-8 w-8' /></li>
-                        <li><AiFillFacebook className='h-8 w-8' /></li>
+                        <li><a target="_blank" href="https://github.com/mickeymaruf"><AiFillGithub className='h-8 w-8' /></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/mickeymaruf/"><AiFillLinkedin className='h-8 w-8' /></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/mickeymaruf"><AiFillFacebook className='h-8 w-8' /></a></li>
                     </ul>
                     <div className='md:hidden' onClick={() => setToggle(!toggle)}>
                         <HiBars3BottomLeft className={`h-8 w-8 ${toggle && 'opacity-0'} duration-300`} />
@@ -38,9 +38,9 @@ const Header = () => {
                     <li><a href="#skills"><HiWrenchScrewdriver className='h-8 w-8' /></a></li>
                     <li><a href="#projects"><AiOutlineProject className='h-8 w-8' /></a></li>
                     <li><a href="#contact"><AiOutlinePhone className='h-8 w-8' /></a></li>
-                    <li><a href="#home"><AiFillGithub className='h-8 w-8' /></a></li>
-                    <li><a href="#home"><AiFillLinkedin className='h-8 w-8' /></a></li>
-                    <li><a href="#home"><AiFillFacebook className='h-8 w-8' /></a></li>
+                    <li><a target="_blank" href="https://github.com/mickeymaruf"><AiFillGithub className='h-8 w-8' /></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/mickeymaruf/"><AiFillLinkedin className='h-8 w-8' /></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/mickeymaruf"><AiFillFacebook className='h-8 w-8' /></a></li>
                 </ul>
             </div>
             <section className='w-10/12 mx-auto flex flex-col lg:flex-row items-center justify-between py-8'>
