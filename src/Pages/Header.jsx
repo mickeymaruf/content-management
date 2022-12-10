@@ -49,21 +49,22 @@ const Header = () => {
                         <span className='wave'>👋</span> Hi there,
                     </h2>
 
-                    <h1 className='text-5xl font-bold mt-3 mb-5'>
-                        I'm Maruf <br />
-                        <TypeAnimation
-                            sequence={[
-                                'Full Stack Developer', // Types 'One'
-                                1000, // Waits 1s
-                                'MERN Stack Developer', // Deletes 'One' and types 'Two'
-                                2000, // Waits 2s
-                                'Front Stac', // Types 'Three' without deleting 'Two'
-                            ]}
-                            // wrapper="div"
-                            cursor={true}
-                            repeat={Infinity}
-                        />
-
+                    <h1 className='font-bold mt-3 mb-5'>
+                        <span className='text-5xl block'>I'm Maruf</span>
+                        <span className='text-[2rem] md:text-5xl'>
+                            <TypeAnimation
+                                sequence={[
+                                    'Full Stack Developer', // Types 'One'
+                                    1000, // Waits 1s
+                                    'MERN Stack Developer', // Deletes 'One' and types 'Two'
+                                    2000, // Waits 2s
+                                    'Front Stac', // Types 'Three' without deleting 'Two'
+                                ]}
+                                // wrapper="div"
+                                cursor={true}
+                                repeat={Infinity}
+                            />
+                        </span>
                     </h1>
                     <p className='text-xl font-thin'>
                         I'm a full-stack JavaScript developer with a passion for developing scalable web applications and working across the full stack. I've built some web apps from the ground up using ReactJs, NodeJs, and MongoDB.
