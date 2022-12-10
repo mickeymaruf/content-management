@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Skills = () => {
     return (
-        <div className='w-11/12 mx-auto bg-slate-900 px-16 rounded-2xl'>
+        <div id="skills" className='w-11/12 mx-auto bg-slate-900 px-16 rounded-2xl'>
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
