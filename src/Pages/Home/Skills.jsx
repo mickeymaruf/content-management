@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGit, FaGitAlt, FaGithub, FaNode, FaReact } from 'react-icons/fa'
-import { SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiPython, SiDjango, SiVercel, SiNetlify } from 'react-icons/si'
+import { SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiExpress, SiMongodb, SiPython, SiDjango, SiVercel, SiNetlify, SiFirebase } from 'react-icons/si'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Skills = () => {
@@ -33,7 +33,9 @@ const Skills = () => {
                     <div className='flex justify-between'>
                         <FaGitAlt className="w-20 h-20 text-red-500" />
                         <FaGithub className="w-20 h-20 text-black" />
+                        <SiFirebase className="w-20 h-20 text-yellow-500" />
                         <SiNetlify className="w-20 h-20 text-sky-500" />
+                        <SiVercel className="w-20 h-20 text-gray-500" />
                     </div>
                 </SwiperSlide>
             </Swiper>
