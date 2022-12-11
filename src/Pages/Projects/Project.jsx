@@ -32,7 +32,7 @@ const Project = () => {
             <h3 className='text-2xl font-medium mt-5'>Technologies:</h3>
             <ul className='ml-10 flex flex-wrap gap-3 mt-2'>
                 {
-                    technologies?.split(",").map(item => <li className='border rounded-full px-4 py-1'>{item}</li>)
+                    technologies?.split(",").map((item, idx) => <li key={`technology${idx}`} className='border rounded-full px-4 py-1'>{item}</li>)
                 }
             </ul>
             <Link to="/#projects"><button className='btn mt-8 flex items-center gap-2 text-sm'><AiOutlineArrowLeft /> Go Home</button></Link>

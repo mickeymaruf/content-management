@@ -5,6 +5,7 @@ const About = () => {
         <div id='about' className='w-10/12 mx-auto py-20'>
             <div className='w-20 h-1 bg-white mb-5 rounded-full'></div>
             <h1 className='text-5xl font-medium'>About Me</h1>
+            
             <p className='text-xl mt-5'>
                 👋 Hey there, This is Maruf. A young and driven undergrad student from Bangladesh with a passion for solving problems and scaling software solutions.
 

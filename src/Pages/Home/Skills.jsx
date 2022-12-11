@@ -14,7 +14,7 @@ const Skills = () => {
                 slidesPerView={1}
             >
                 <SwiperSlide>
-                    <div className='flex justify-between'>
+                    <div className='flex gap-5 justify-between'>
                         <FaReact className="w-20 h-20 text-blue-400" />
                         <SiJavascript className="w-20 h-20 text-yellow-300" />
                         <SiHtml5 className="w-20 h-20 text-orange-500" />
@@ -24,7 +24,7 @@ const Skills = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='flex justify-between'>
+                    <div className='flex gap-8 justify-between'>
                         <FaNode className="w-20 h-20 text-green-500" />
                         <SiExpress className="w-20 h-20 text-black" />
                         <SiMongodb className="w-20 h-20 text-green-500" />
@@ -33,7 +33,7 @@ const Skills = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='flex justify-between'>
+                    <div className='flex gap-10 justify-between'>
                         <FaGitAlt className="w-20 h-20 text-red-500" />
                         <FaGithub className="w-20 h-20 text-black" />
                         <SiFirebase className="w-20 h-20 text-yellow-500" />
