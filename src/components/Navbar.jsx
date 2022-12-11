@@ -28,16 +28,16 @@ const Navbar = () => {
                 </div>
             </nav>
             <div className={`md:hidden backdrop-blur-lg py-10 ${toggle ? 'right-0' : '-right-20'} top-0 fixed h-screen duration-500 flex flex-col justify-center z-50 border-l border-slate-900`}>
-                <div className='px-3 absolute top-0 left-1/2 -translate-x-1/2 pt-8 cursor-pointer' onClick={() => setToggle(!toggle)}>
+                <div className='absolute top-0 left-1/2 -translate-x-1/2 mt-8 cursor-pointer' onClick={() => setToggle(!toggle)}>
                     <HiOutlineXMark className='h-8 w-8' />
                 </div>
                 <ul className='px-3 flex flex-col items-center gap-6 text-center'>
-                    <Link to="#home"><li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'>Home</li></Link>
-                    <Link to="#projects"><li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'>Projects</li></Link>
-                    <Link to="#about"><li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'>About</li></Link>
-                    <Link to="#skills"><li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'>Skills</li></Link>
-                    <Link to="/blog"><li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'>Blogs</li></Link>
-                    <Link to="#contact"><li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'>Contact</li></Link>
+                    <li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'><Link to="#home">Home</Link></li>
+                    <li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'><Link to="#projects">Projects</Link></li>
+                    <li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'><Link to="#about">About</Link></li>
+                    <li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'><Link to="#skills">Skills</Link></li>
+                    <li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'><Link to="/blog">Blogs</Link></li>
+                    <li className='w-full bg-slate-700 text-xs font-medium p-1 -rotate-45'><Link to="#contact">Contact</Link></li>
                     <li><a target="_blank" href="https://github.com/mickeymaruf"><AiFillGithub className='h-8 w-8' /></a></li>
                     <li><a target="_blank" href="https://www.linkedin.com/in/mickeymaruf/"><AiFillLinkedin className='h-8 w-8' /></a></li>
                     <li><a target="_blank" href="https://www.facebook.com/mickeymaruf"><AiFillFacebook className='h-8 w-8' /></a></li>
