@@ -5,7 +5,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Skills = () => {
     return (
-        <div id="skills" className='w-11/12 mx-auto bg-slate-900 px-16 rounded-2xl'>
+        <div id="skills" className='w-10/12 mx-auto bg-slate-900 rounded-2xl'>
+            <div className='w-20 h-1 bg-white mb-5 rounded-full'></div>
+            <h1 className='text-5xl font-medium'>Skills</h1>
+            <p className='text-2xl mt-5 mb-10'>These are the technologies I'm expret in!</p>
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}

@@ -9,7 +9,7 @@ const Root = () => {
         <div className="bg-slate-900 text-white">
             <Header />
             <Outlet />
-            {/* <Footer /> */}
+            <Footer />
             <Toaster />
         </div>
     );

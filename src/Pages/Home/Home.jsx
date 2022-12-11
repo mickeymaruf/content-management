@@ -12,7 +12,9 @@ const Home = () => {
             <div className='relative -top-44'>
                 <About />
             </div>
-            {/* <Skills /> */}
+            <div className='relative -top-24'>
+                <Skills />
+            </div>
             <Contact />
         </>
     );
