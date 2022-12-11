@@ -2,13 +2,26 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper';
 import { AiFillGithub } from 'react-icons/ai';
+
 import pharma from '../../assets/projects/pharma.png';
+import pharma2 from '../../assets/projects/pharma2.png';
+import pharma3 from '../../assets/projects/pharma3.png';
+
 import dailydeals from '../../assets/projects/daily-deals.png';
 import dailydeals2 from '../../assets/projects/daily-deals-2.png';
 import dailydeals3 from '../../assets/projects/daily-deals-3.png';
+
 import quizlet from '../../assets/projects/quizlet.png';
+import quizlet1 from '../../assets/projects/quizlet1.png';
+import quizlet2 from '../../assets/projects/quizlet2.png';
+
 import brownsKitchen from '../../assets/projects/brownsKitchen.png';
+import brownsKitchen2 from '../../assets/projects/brownsKitchen2.png';
+import brownsKitchen3 from '../../assets/projects/brownsKitchen3.png';
+
 import pirates from '../../assets/projects/pirates.png';
+import pirates2 from '../../assets/projects/pirates2.png';
+import pirates3 from '../../assets/projects/pirates3.png';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,7 +31,7 @@ const projects = [
     {
         _id: 1,
         name: 'Pharma - Clinic management app',
-        image: [pharma],
+        image: [pharma, pharma2, pharma3],
         desc: 'Designed and developed a whole doctors service platform to manage patients and visiting. Implemented appointment booking system according to the date and time slots. Implemented role- based functionality and added Firebase for authentication.',
         features: [
             'Designed and developed a whole doctors service platform to manage patients and visiting',
@@ -26,7 +39,8 @@ const projects = [
             'Restricted users from booking multiple slots at a day, but eligible to book different services',
         ],
         technologies: 'React(Vite), Node.js, Express.js, MongoDB, Firebase, Tailwind CSS',
-        code: 'https://github.com/mickeymaruf/pharma',
+        clientCode: 'https://github.com/mickeymaruf/pharma',
+        serverCode: 'https://github.com/mickeymaruf/pharma//tree/server',
         live: 'https://pharma-1cc98.web.app//'
     },
     {
@@ -40,27 +54,28 @@ const projects = [
             'Added Stripe Payment integration to purchase or order products using customer’s card / visa',
         ],
         technologies: 'React(Vite), Node.js, Express.js, MongoDB, Firebase, Tailwind CSS',
-        code: 'https://github.com/mickeymaruf/dailydeals',
+        clientCode: 'https://github.com/mickeymaruf/dailydeals',
+        serverCode: 'https://github.com/mickeymaruf/dailydeals/tree/server',
         live: 'https://dailydeals-37e5b.firebaseapp.com/'
     },
     {
         _id: 3,
         name: 'Quizlet - Online Quiz (React)',
-        image: [quizlet],
+        image: [quizlet, quizlet1, quizlet2],
         desc: 'An online quiz application. You will find quizzes on different topics about Programming concepts. You can start any quiz and it will show you right/wrong based on your selection. There is a answer reveal button to reveal the correct answer.',
         features: [
-            'Designed and developed a dashboard for different users role(seller, buyer and admin)',
-            'Implemented Advertisement features for sellers to advertise their products for better reach',
-            'Added Stripe Payment integration to purchase or order products using customer’s card / visa',
+            'Live Quiz and Answer: It will tell you right or wrong based on your selected answer.',
+            'Reveal Answer: If you click the show button, It will show you the right answer.',
+            'Blog: QNA',
         ],
-        technologies: 'React(Vite), Node.js, Express.js, MongoDB, Firebase, Tailwind CSS',
-        code: 'https://github.com/mickeymaruf/dailydeals',
-        live: 'https://dailydeals-37e5b.firebaseapp.com/'
+        technologies: 'React, Tailwind CSS, React Dom',
+        clientCode: 'https://github.com/mickeymaruf/quizlet',
+        live: 'https://quizlet1.netlify.app/'
     },
     {
         _id: 4,
         name: 'Browns Kitchen - Food service review app',
-        image: [brownsKitchen],
+        image: [brownsKitchen, brownsKitchen2, brownsKitchen3],
         desc: 'A homemade food delivery service review website. Users can leave reviews on any particular dish. A new dish can be added. Users can edit/update, delete their comments and rate a dish using starts. Firebase authentication added.',
         features: [
             'Created reviews and rating functionality for users to leave reviews on a particular dish',
@@ -68,22 +83,26 @@ const projects = [
             'Applied user authentication so that users can only review when they are logged in',
         ],
         technologies: 'React, Node.js, Express.js, Firebase, MongoDB, Tailwind CSS',
-        code: 'https://github.com/mickeymaruf/browns-kitchen',
+        clientCode: 'https://github.com/mickeymaruf/browns-kitchen',
+        serverCode: 'https://github.com/mickeymaruf/browns-kitchen/tree/server',
         live: 'https://browns-kitchen.web.app/'
     },
     {
         _id: 5,
         name: 'Pirates of Programming Educational Website',
-        image: [pirates],
+        image: [pirates, pirates2, pirates3],
         desc: 'It is a educational website where a student can enroll any courses. Course materials have detail information in detail page and courses are listed unser categories. React, React-router-dom, Firebase authentication, Private route added.',
         features: [
-            'Created reviews and rating functionality for users to leave reviews on a particular dish',
-            'Implemented a rating feature using the start icon so that users can rate any dish out of 5',
-            'Applied user authentication so that users can only review when they are logged in',
+            'User Authentication using login and signup.',
+            'Courses are listed down in the course page.You can choose a course and see the detail content about the course.',
+            'Print course details is a extra features where you can print down any particular course information.',
+            'Get premium access is a protected route to access which you need to login first and after authenticated user will get redirected to that checkout page automatically.',
+            'User Profile: You can update the user info in this section.',
         ],
-        technologies: 'React, Node.js, Express.js, Firebase, MongoDB, Tailwind CSS',
-        code: 'https://github.com/mickeymaruf/browns-kitchen',
-        live: 'https://browns-kitchen.web.app/'
+        technologies: 'React, React-Router, Firebase, Node.js, Tailwind CSS',
+        clientCode: 'https://github.com/mickeymaruf/pirates-of-programming',
+        serverCode: 'https://github.com/mickeymaruf/pirates-of-programming/tree/server',
+        live: 'https://pirates-of-programming.web.app/'
     },
 
 ]

@@ -5,7 +5,7 @@ import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 const Project = () => {
     const location = useLocation();
-    const { name, image, desc, features, technologies, code, live } = location.state;
+    const { name, image, desc, features, technologies, clientCode, serverCode, live } = location.state;
     return (
         <div className="bg-slate-900 text-white min-h-screen p-10 md:p-20 ">
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
@@ -14,7 +14,11 @@ const Project = () => {
                 <img src={image[2]} alt="" />
             </div>
             <div className='mt-8'>
-                <a target="_blank" href={code}><button className='btn bg-blue-600 text-xs font-medium mr-4'>Code</button></a>
+                <a target="_blank" href={clientCode}><button className='btn bg-blue-600 text-xs font-medium mr-4'>Client Code</button></a>
+                {
+                    serverCode &&
+                    <a target="_blank" href={serverCode}><button className='btn bg-blue-600 text-xs font-medium mr-4'>Server Code</button></a>
+                }
                 <a target="_blank" href={live}><button className='btn bg-blue-600 text-xs font-medium mr-4'>Live Site</button></a>
             </div>
             <h1 className='text-4xl mt-5 mb-5'>{name}</h1>

@@ -12,9 +12,10 @@ const Navbar = () => {
                 <div className='w-11/12 mx-auto flex justify-between items-center py-8'>
                     <Link to="/"><h1 className='text-3xl font-bold'>MARUF</h1></Link>
                     <ul className='hidden md:flex gap-10 text-xl text-muted'>
-                        <li><Link to="/#home">Home</Link></li>
-                        <li><Link to="/#skills">Skills</Link></li>
                         <li><Link to="/#projects">Projects</Link></li>
+                        <li><Link to="/#skills">Skills</Link></li>
+                        <li><Link to="/#about">About</Link></li>
+                        <li><Link to="/blog">Blogs</Link></li>
                         <li><Link to="/#contact">Contact</Link></li>
                     </ul>
                     <ul className='hidden md:flex gap-10'>
