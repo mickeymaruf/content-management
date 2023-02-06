@@ -17,7 +17,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blog/:id',
-                element: <BlogDetail />
+                element: <BlogDetail />,
+                loader: ({ params }) => fetch(`https://portfolio-server-iota-ten.vercel.app/blogs/${params.id}/`)
             },
             {
                 path: '/create-blog',

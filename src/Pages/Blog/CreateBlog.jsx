@@ -17,7 +17,7 @@ const CreateBlog = () => {
                         <input type="text" placeholder="Lorem ipsum dolor sit, amet adipisicing" className="w-full rounded-md focus:ring focus:ring-opacity-75 bg-slate-900 bg-opacity-40 border border-slate-600 p-2 focus:ring-slate-400 dark:border-gray-700 dark:text-gray-900" />
                     </div>
                     <div className='mb-2'>
-                        <label className="block text-sm mb-2">Photo URL</label>
+                        <label className="block text-sm mb-2">Thumb URL</label>
                         <input type="text" placeholder="https://" className="w-full rounded-md focus:ring focus:ring-opacity-75 bg-slate-900 bg-opacity-40 border border-slate-600 p-2 focus:ring-slate-400 dark:border-gray-700 dark:text-gray-900" />
                     </div>
                     <div className="mb-2">

@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BlogCard = () => {
+const BlogCard = ({ blog }) => {
+    const { _id, title, thumbURL, description } = blog;
+
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md border border-slate-600 backdrop-blur-xl text-gray-100">
             <div className="flex space-x-4">
@@ -11,9 +14,13 @@ const BlogCard = () => {
                 </div>
             </div>
             <div>
-                <img src="https://source.unsplash.com/random/100x100/?5" alt="" className="object-cover w-full mb-4 h-60 sm:h-48 bg-gray-500" />
-                <h2 className="mb-1 text-xl font-semibold">Nam cu platonem posidonium sanctus debitis te</h2>
-                <p className="text-sm text-gray-400">Eu qualisque aliquando mel, id lorem detraxit nec, ad elit minimum pri. Illum ipsum detracto ne cum. Mundi nemore te ius, vim ad illud atqui apeirian...</p>
+                <img src={thumbURL} alt="" className="object-cover w-full mb-4 h-60 sm:h-48 bg-gray-500" />
+                <Link to={`/blog/${_id}`}>
+                    <h2 className="mb-1 text-xl font-semibold hover:underline underline-offset-2">{title}</h2>
+                </Link>
+                <p className="text-sm text-gray-400">
+                    {description.length > 120 ? description.slice(0, 120) + '...' : description}
+                </p>
             </div>
             <div className="flex flex-wrap justify-between">
                 <div className="space-x-2">
