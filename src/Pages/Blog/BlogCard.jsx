@@ -1,17 +1,24 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import deleteBlogData from '../../redux/thunk/blogs/deleteBlogData';
 
 const BlogCard = ({ blog }) => {
     const { _id, title, thumbURL, description } = blog;
+    const dispatch = useDispatch();
 
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md border border-slate-600 backdrop-blur-xl text-gray-100">
-            <div className="flex space-x-4">
-                <img alt="" src="https://source.unsplash.com/100x100/?portrait" className="object-cover w-12 h-12 rounded-full shadow bg-gray-500" />
-                <div className="flex flex-col space-y-1">
-                    <a rel="noopener noreferrer" href="#" className="text-sm font-semibold">Leroy Jenkins</a>
-                    <span className="text-xs text-gray-400">4 hours ago</span>
+            <div className="flex justify-between">
+                <div className="flex space-x-4">
+                    <img alt="" src="https://avatars.githubusercontent.com/u/99499442?v=4" className="object-cover w-12 h-12 rounded-full shadow bg-gray-500" />
+                    <div className="flex flex-col space-y-1">
+                        <a rel="noopener noreferrer" href="#" className="text-sm font-semibold">Maruf</a>
+                        <span className="text-xs text-gray-400">@mickeymaruf</span>
+                    </div>
                 </div>
+                <span className="text-xs text-gray-400 ml-auto">4 hours ago</span>
+                <button onClick={() => dispatch(deleteBlogData(_id))}>delete</button>
             </div>
             <div>
                 <img src={thumbURL} alt="" className="object-cover w-full mb-4 h-60 sm:h-48 bg-gray-500" />
