@@ -1,13 +1,12 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import getBlogsData from '../../redux/thunk/blogs/getBlogsData';
 import BlogCard from './BlogCard';
 
 const Blogs = () => {
-    const blogs = useSelector(state => state.blogs);
+    const blogs = useSelector(state => state.blog.blogs);
     const dispatch = useDispatch();
 
     useEffect(() => {
