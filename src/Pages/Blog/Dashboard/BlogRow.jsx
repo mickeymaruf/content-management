@@ -5,9 +5,10 @@ import deleteBlogData from '../../../redux/thunk/blogs/deleteBlogData';
 import { FiEdit } from 'react-icons/fi';
 import { TbTrash } from 'react-icons/tb';
 import { useLocation } from 'react-router-dom';
+import moment from 'moment';
 
 const BlogRow = (blog) => {
-    const { _id, title, thumbURL, description, tags } = blog.blog;
+    const { _id, title, thumbURL, description, tags, createdAt } = blog.blog;
     const dispatch = useDispatch();
     const location = useLocation();
 
@@ -16,11 +17,13 @@ const BlogRow = (blog) => {
             <img className='w-44 rounded-lg' src={thumbURL} alt="" />
             <div>
                 <Link to={`/blog/${_id}`}>
-                    <h4 className='hover:underline underline-offset-2'>{title.length > 35 ? title.slice(0, 35) + '...' : title}</h4>
+                    <h4 className='hover:underline underline-offset-2'>{title?.length > 35 ? title.slice(0, 35) + '...' : title}</h4>
                 </Link>
                 {
                     location.pathname.includes("dashboard") &&
-                    <p className='text-sm text-slate-500'>4 hours ago</p>
+                    <p className='text-sm text-slate-500'>
+                        {moment(createdAt).startOf('hour').fromNow()}
+                    </p>
                 }
             </div>
             {

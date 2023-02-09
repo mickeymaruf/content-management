@@ -20,8 +20,8 @@ const BlogHome = () => {
             <div className='w-10/12 mx-auto'>
                 <Breadcrumbs />
             </div>
-            <div className='w-10/12 mx-auto grid grid-cols-12 items-start gap-10'>
-                <div className='col-span-4 sticky top-0 border border-slate-600 p-5 rounded-lg'>
+            <div className='w-10/12 mx-auto lg:grid grid-cols-12 items-start gap-10'>
+                <div className='col-span-4 lg:sticky top-0 border border-slate-600 p-5 rounded-lg'>
                     <p>Tags:</p>
                     <div className='mt-3 mb-8 flex flex-wrap gap-2 text-sm items-center'>
                         {
@@ -40,7 +40,7 @@ const BlogHome = () => {
                     </div>
                 </div>
 
-                <div className='col-span-8'>
+                <div className='col-span-8 mt-10 lg:mt-0'>
                     <Outlet />
                 </div>
             </div>

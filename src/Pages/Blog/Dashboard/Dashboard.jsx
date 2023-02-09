@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import BlogRow from './BlogRow';
 
@@ -11,7 +12,9 @@ const Dashboard = () => {
         <>
             {
                 location.pathname.includes("history")
-                    ? history.map(blog => <BlogRow key={blog._id} blog={blog} />)
+                    ? history.length
+                        ? history.map(blog => <BlogRow key={blog._id} blog={blog} />)
+                        : <p>No history found !!! <Link className="underline" to="/">Continue Reading.</Link></p>
 
                     : blogs
                         .sort((a, b) => {
