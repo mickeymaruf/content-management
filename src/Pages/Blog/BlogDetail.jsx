@@ -1,10 +1,18 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useLoaderData } from 'react-router-dom';
+import { addToHistory } from '../../redux/actionCreators/blogActions';
 import Breadcrumbs from './Components/Breadcrumbs';
 
 const BlogDetail = () => {
     const blog = useLoaderData();
     const { _id, title, thumbURL, description } = blog;
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(addToHistory(blog));
+    }, [blog])
 
     return (
         <section className='bg-[url("https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png")] bg-no-repeat bg-cover bg-center py-10 mb-10'>

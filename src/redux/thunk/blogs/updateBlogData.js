@@ -12,7 +12,7 @@ const updateBlogData = (id, blog) => {
         const data = await res.json();
 
         if (data.modifiedCount > 0) {
-            dispatch(updateBlog(blog));
+            dispatch(updateBlog({ _id: id, ...blog }));
             return { status: 'success' }
         }
     }

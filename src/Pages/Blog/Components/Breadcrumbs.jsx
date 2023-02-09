@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Breadcrumbs = () => {
+    const location = useLocation();
+
     return (
         <nav aria-label="breadcrumb" className="w-full p-4 dark:text-gray-100">
             <ol className="flex h-8 space-x-2">
@@ -12,23 +15,23 @@ const Breadcrumbs = () => {
                         </svg>
                     </Link>
                 </li>
-                {/* <li className="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-600">
-                        <path d="M32 30.031h-32l16-28.061z"></path>
-                    </svg>
-                    <a rel="noopener noreferrer" href="#" className="flex items-center px-1 capitalize hover:underline">Home</a>
-                </li> */}
                 <li className="flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-600">
                         <path d="M32 30.031h-32l16-28.061z"></path>
                     </svg>
-                    <Link to="/" className="flex items-center px-1 capitalize hover:underline">Blog</Link>
+                    <Link to="/" className={`flex items-center px-1 capitalize ${location.pathname === "/" && "underline"} hover:underline`}>Blog</Link>
                 </li>
                 <li className="flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-600">
                         <path d="M32 30.031h-32l16-28.061z"></path>
                     </svg>
-                    <Link to="/dashboard" className="flex items-center px-1 capitalize hover:underline">Dashboard</Link>
+                    <Link to="/dashboard" className={`flex items-center px-1 capitalize ${location.pathname.includes("dashboard") && "underline"} hover:underline`}>Dashboard</Link>
+                </li>
+                <li className="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-600">
+                        <path d="M32 30.031h-32l16-28.061z"></path>
+                    </svg>
+                    <Link to="/history" className={`flex items-center px-1 capitalize ${location.pathname.includes("history") && "underline"} hover:underline`}>Reading History</Link>
                 </li>
             </ol>
         </nav>

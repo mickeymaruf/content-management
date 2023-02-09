@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BlogCard = ({ blog }) => {
     const { _id, title, thumbURL, description, tags } = blog;
-
+    
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md border border-slate-600 backdrop-blur-xl text-gray-100">
             <div className="flex justify-between">
