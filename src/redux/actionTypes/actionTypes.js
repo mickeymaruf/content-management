@@ -5,3 +5,4 @@ export const DELETE_CONTENT = "DELETE_CONTENT";
 
 // filter
 export const TOGGLE_SORT = "TOGGLE_SORT";
+export const TOGGLE_TAG = "TOGGLE_TAG";

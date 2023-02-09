@@ -1,4 +1,4 @@
-import { TOGGLE_SORT } from "../actionTypes/actionTypes";
+import { TOGGLE_SORT, TOGGLE_TAG } from "../actionTypes/actionTypes";
 
 const initialState = {
     sortBy: "last_upload",
@@ -11,6 +11,17 @@ const filterReducer = (state = initialState, action) => {
             return {
                 ...state,
                 sortBy: action.payload
+            }
+        case TOGGLE_TAG:
+            if (state.tags.includes(action.payload)) {
+                return {
+                    ...state,
+                    tags: state.tags.filter(tag => tag !== action.payload)
+                }
+            }
+            return {
+                ...state,
+                tags: [...state.tags, action.payload]
             }
 
         default:

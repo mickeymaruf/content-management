@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import deleteBlogData from '../../redux/thunk/blogs/deleteBlogData';
 
 const BlogCard = ({ blog }) => {
-    const { _id, title, thumbURL, description } = blog;
+    const { _id, title, thumbURL, description, tags } = blog;
     const dispatch = useDispatch();
 
     return (
@@ -22,6 +22,7 @@ const BlogCard = ({ blog }) => {
             </div>
             <div>
                 <img src={thumbURL} alt="" className="object-cover w-full mb-4 h-60 sm:h-48 bg-gray-500" />
+                <p className='text-sm text-slate-400'>{tags}</p>
                 <Link to={`/blog/${_id}`}>
                     <h2 className="mb-1 text-xl font-semibold hover:underline underline-offset-2">{title}</h2>
                 </Link>
