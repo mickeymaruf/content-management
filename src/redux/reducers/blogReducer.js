@@ -17,11 +17,14 @@ const blogReducer = (state = initialState, action) => {
                 ...state,
                 blogs: [...state.blogs, action.payload]
             }
-        // case UPDATE_CONTENT:
-        //     return {
-        //         ...state,
-        //         blogs: action.payload
-        //     }
+        case UPDATE_CONTENT:
+            return {
+                ...state,
+                blogs: [
+                    ...state.blogs.filter(blog => blog._id !== action.payload.id),
+                    action.payload
+                ]
+            }
         case DELETE_CONTENT:
             return {
                 ...state,

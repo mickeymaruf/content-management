@@ -1,11 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import deleteBlogData from '../../redux/thunk/blogs/deleteBlogData';
 
 const BlogCard = ({ blog }) => {
     const { _id, title, thumbURL, description, tags } = blog;
-    const dispatch = useDispatch();
 
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md border border-slate-600 backdrop-blur-xl text-gray-100">
@@ -18,7 +15,6 @@ const BlogCard = ({ blog }) => {
                     </div>
                 </div>
                 <span className="text-xs text-gray-400 ml-auto">4 hours ago</span>
-                <button onClick={() => dispatch(deleteBlogData(_id))}>delete</button>
             </div>
             <div>
                 <img src={thumbURL} alt="" className="object-cover w-full mb-4 h-60 sm:h-48 bg-gray-500" />
@@ -27,7 +23,7 @@ const BlogCard = ({ blog }) => {
                     <h2 className="mb-1 text-xl font-semibold hover:underline underline-offset-2">{title}</h2>
                 </Link>
                 <p className="text-sm text-gray-400">
-                    {description.length > 120 ? description.slice(0, 120) + '...' : description}
+                    {description?.length > 120 ? description.slice(0, 120) + '...' : description}
                 </p>
             </div>
             <div className="flex flex-wrap justify-between">

@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux';
-import BlogCard from './BlogCard';
+import BlogRow from './BlogRow';
 
-const Blogs = () => {
+const Dashboard = () => {
     const blogs = useSelector(state => state.blog.blogs);
     const { sortBy, tags } = useSelector(state => state.filter);
 
     return (
-        <div className='grid grid-cols-2 gap-5'>
+        <>
             {
                 blogs
                     .sort((a, b) => {
@@ -17,13 +17,13 @@ const Blogs = () => {
                     })
                     .filter(blog => {
                         if (!tags.length) return blog;
-                        // filter logic
+                        // filtering logic
                         return tags.filter(tag => blog.tags.split(", ").includes(tag)).length
                     })
-                    .map(blog => <BlogCard key={blog._id} blog={blog} />)
+                    .map(blog => <BlogRow key={blog._id} blog={blog} />)
             }
-        </div>
+        </>
     );
 };
 
-export default Blogs;
+export default Dashboard;
